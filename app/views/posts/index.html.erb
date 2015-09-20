@@ -3,6 +3,10 @@
 
   <p> Published at: </p>
   <p> <%= time_ago_in_words(post.created_at) %> </p>
+  <p> by
+    <%= post.user.email %>
+    <%= post.user.id %>
+ </p>
   <% end %>
 
   <%= link_to "New Post", new_post_path %>
