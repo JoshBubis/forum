@@ -14,7 +14,7 @@ def new
 end
 
 def create
-  @post = Post.current_user.save(post_params)
+  @post = current_user.posts.build(post_params)
 
   if @post.save
     redirect_to @post
@@ -32,6 +32,7 @@ def update
   else
     render 'edit'
   end
+  # Honestly don't know if I need to put any of this in update...
 end
 
 def destroy
