@@ -50,3 +50,9 @@ production:
 
 cucumber:
   <<: *TEST
+
+  production:
+  <<: *default
+  database: forum_production
+  username: forum
+  password: <%= ENV['FORUM_DATABASE_PASSWORD'] %>
