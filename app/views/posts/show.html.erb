@@ -2,25 +2,8 @@
 
 <p><%= @post.content %></p>
 
-    <%#-- #comments
-      <h2>
-          <%= @post.comment.count %>
-            <%#<%=  Comments %>
 
-          <%#  <%= render @post.comments %>
-
-        <%#    <% end %>
-
-  <%#    </h2>
-      <h3>Reply to thread
-
-        <%= render 'form' %>
-
-  <%#      <% end %>
-
-
-  <%#    </h3> --> #%>
-
+<%= render 'form' %>
 
 <%= link_to 'Edit', edit_post_path(@post) %>
 <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: "Are you sure you want to do this?" } %>
