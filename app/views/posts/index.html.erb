@@ -6,9 +6,12 @@
   <p> Published at: </p>
   <p> <%= time_ago_in_words(post.created_at) %> </p>
   <p> by
-    <%= post.user.email %>
-    <%= post.user.id %>
+    User Email: <%= post.user.email %>
+    user ID: <%= post.user.id %>
+
+    post ID:<%= post.id %>
  </p>
   <% end %>
 
   <%= link_to "Post New Post", new_post_path %>
+  
