@@ -21,7 +21,7 @@
 #   database: db/test.sqlite3
 #
 # production:
-
+#   <<: *default
 #   database: db/production.sqlite3
 
 development:
@@ -47,12 +47,12 @@ production:
   pool: 5
   username:
   password:
-
+ 
 cucumber:
   <<: *TEST
 
   production:
-  <<: *default
+
   database: forum_production
   username: forum
   password: <%= ENV['FORUM_DATABASE_PASSWORD'] %>
